@@ -21,4 +21,5 @@
 @mixin remove-default-links {
   list-style-type: none;
   text-decoration: none;
+  color: inherit;
 }

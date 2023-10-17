@@ -1,0 +1,10 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+a {
+  @include remove-default-links;
+}
+a:hover {
+  color: #00a0c6;
+  cursor: pointer;
+}
