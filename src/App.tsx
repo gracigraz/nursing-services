@@ -2,20 +2,24 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.scss";
 import { NotFoundPage } from "./pages/NotFoundPage/NotFoundPage";
 import { HomePage } from "./pages/HomePage/HomePage";
+import { AboutUsPage } from "./pages/AboutUsPage/AboutUsPage";
+import { ServicesPage } from "./pages/ServicesPage/ServicesPage";
+import { ContactPage } from "./pages/ContactPage/ContactPage";
 
-export const App = () => {
+const App = () => {
   return (
     <BrowserRouter>
       {/* <Header /> */}
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/sobre-nosotros" />
-        <Route path="/servicios" />
-        <Route path="/blog" />
-        <Route path="/contacto" />
+        <Route path="/sobre-nosotros" element={<AboutUsPage />} />
+        <Route path="/servicios" element={<ServicesPage />} />
+        <Route path="/blog" element={<HomePage />} />
+        <Route path="/contacto" element={<ContactPage />} />
         <Route path="/*" element={<NotFoundPage />} />
       </Routes>
       {/* <Footer /> */}
     </BrowserRouter>
   );
 };
+export default App;
